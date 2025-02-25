@@ -12,7 +12,7 @@ const About = () => {
         transition={{ duration: 0.8 }}
       >
         <img
-          src="/images/profile.jpg" // Update this path if needed
+            src={`${process.env.PUBLIC_URL}/images/profile.jpg`} // Update this path if needed
           alt="Profile"
           className="w-full h-full object-cover"
         />

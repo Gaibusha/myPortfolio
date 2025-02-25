@@ -6,21 +6,21 @@ const projects = [
   {
     title: "Task Manager App",
     description: "A simple task management system built with Java and Spring Boot.",
-    image: "/images/taskManager.png",
+    image: `${process.env.PUBLIC_URL}/images/taskManager.png`,
     github: "https://github.com/Gaibusha/Task-Manager-Application",
     details: "This project includes features such as task creation, editing, deletion, and categorization. It also supports user authentication and authorization."
   },
   {
     title: "E-Commerce Website",
     description: "A full-stack e-commerce site using React and Firebase.",
-    image: "/images/eCommerce.png",
+    image: `${process.env.PUBLIC_URL}/images/eCommerce.png`,
     github: "https://github.com/Gaibusha/brand-product-management",
     details: "This project includes features such as product listing, shopping cart, checkout, and order management. It also supports user authentication and payment integration."
   },
   {
     title: "Portfolio Website",
     description: "My personal portfolio showcasing my skills and projects.",
-    image: "/images/portfolio.png",
+    image: `${process.env.PUBLIC_URL}/images/portfolio.png`,
     github: "https://github.com/Gaibusha/portfolio-website",
     details: "This project includes sections such as About, Projects, and Contact. It is built using React and styled with Tailwind CSS."
   },
