@@ -11,7 +11,6 @@ const Navbar = () => {
     setDarkMode(!darkMode);
     document.documentElement.classList.toggle("dark");
   };
-  
 
   return (
     <nav className="fixed top-0 w-full bg-white dark:bg-gray-900 bg-opacity-90 backdrop-blur-lg shadow-md py-4 px-6 flex justify-between items-center text-gray-900 dark:text-white z-50">
@@ -24,7 +23,6 @@ const Navbar = () => {
         style={{ fontFamily: "'Great Vibes', cursive" }}
       >
         Gaibusha Shaik
-        
       </motion.div>
 
       {/* Desktop Menu */}
@@ -34,7 +32,7 @@ const Navbar = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.3 }}
       >
-        {["home", "about", "projects", "contact"].map((section) => (
+        {["home", "about", "projects", "experience", "contact"].map((section) => (
           <li key={section}>
             <Link 
               to={section} 
@@ -46,6 +44,16 @@ const Navbar = () => {
             </Link>
           </li>
         ))}
+        <li>
+          <a 
+            href="https://drive.google.com/file/d/1ymazgCFF4DFAFEh7xY6PJrauDq_Cn5an/view?usp=drive_link" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hover:text-indigo-500 transition cursor-pointer"
+          >
+            Resume
+          </a>
+        </li>
       </motion.ul>
 
       {/* Icons (Dark Mode + Mobile Menu) */}
@@ -70,7 +78,7 @@ const Navbar = () => {
           transition={{ duration: 0.5 }}
         >
           <ul className="flex flex-col space-y-4 text-lg">
-            {["home", "about", "projects", "contact"].map((section) => (
+            {["home", "about", "projects", "experience", "contact"].map((section) => (
               <li key={section}>
                 <Link 
                   to={section} 
@@ -83,6 +91,17 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+            <li>
+              <a 
+                href="https://drive.google.com/file/d/1ymazgCFF4DFAFEh7xY6PJrauDq_Cn5an/view?usp=drive_link" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="block text-center hover:text-indigo-500 transition cursor-pointer"
+                onClick={() => setMenuOpen(false)}
+              >
+                Resume
+              </a>
+            </li>
           </ul>
         </motion.div>
       )}
